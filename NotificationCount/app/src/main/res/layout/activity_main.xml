@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+  <com.nex3z.notificationbadge.NotificationBadge
+      android:id="@+id/badge"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      app:nbBackground="@mipmap/ic_launcher_round"
+      app:nbMaxTextLength="2"/>
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/Increase"
+      android:text="Increase Count"
+      />
+
+
+  <Button
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/zero"
+      android:text="Clear"
+      />
+
+
+</LinearLayout>
