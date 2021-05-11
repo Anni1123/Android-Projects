@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:scrolling_image_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrolling_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        scrolling_image_view:speed="100dp"
+        scrolling_image_view:contiguous="false"
+        scrolling_image_view:source="@mipmap/ic_launcher_round" />
+    <com.q42.android.scrollingimageview.ScrollingImageView
+        android:id="@+id/scrolling_background1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        scrolling_image_view:speed="100dp"
+        android:layoutDirection="ltr"
+        scrolling_image_view:contiguous="false"
+        scrolling_image_view:source="@mipmap/ic_launcher_round" />
+
+</LinearLayout>
