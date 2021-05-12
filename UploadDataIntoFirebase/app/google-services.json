@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "2985001082",
+    "firebase_url": "https://uploadsusingfirebase.firebaseio.com",
+    "project_id": "uploadsusingfirebase",
+    "storage_bucket": "uploadsusingfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:2985001082:android:5a3ceac0ea1430bba17bc3",
+        "android_client_info": {
+          "package_name": "com.example.uploadsusingfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "2985001082-j2onhpl5cibr0990j1s083tel6n9kfcb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.uploadsusingfirebase",
+            "certificate_hash": "51b072ca4afbba9448c1fc3ae10d8e216744ed8c"
+          }
+        },
+        {
+          "client_id": "2985001082-2rj8a7p87mjahtbrhg6n8liefqs47d9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUEXo6BOA1ihoTF-2ckULM2fE7C5DkJho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "2985001082-2rj8a7p87mjahtbrhg6n8liefqs47d9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
