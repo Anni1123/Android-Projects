@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <Button android:onClick="start" android:layout_height="wrap_content" android:layout_width="wrap_content" android:visibility="visible" android:backgroundTint="#ff0eff31" android:padding="40dp" android:textSize="80sp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:id="@+id/startButton" android:text="Go!"/>
+
+
+    <RelativeLayout android:layout_height="match_parent" android:layout_width="match_parent" android:visibility="invisible" android:id="@+id/gameRelativeLayout">
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="10dp" android:textSize="30sp" android:id="@+id/timerTextView" android:text="30s" android:background="#fffffb2e"  android:layout_alignParentTop="true"/>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="10dp" android:textSize="30sp" android:id="@+id/pointsTextView" android:text="0/0" android:background="#ffff8807" android:layout_alignParentTop="true" />
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:padding="15dp" android:textSize="25sp" android:layout_centerHorizontal="true" android:id="@+id/sumTextView" android:text="31 + 12" android:layout_alignParentTop="true" android:textColor="#ff141414"/>
+
+
+    <GridLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/gridLayout"  android:layout_marginTop="20dp" android:layout_below="@+id/sumTextView">
+
+    <Button android:onClick="chooseAnswer" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="80sp" android:id="@+id/button0" android:text="3" android:background="#ff444eff" android:tag="0" android:layout_gravity="fill" android:layout_rowWeight="1" android:layout_columnWeight="1" android:layout_row="0" android:layout_column="0"/>
+
+    <Button android:onClick="chooseAnswer" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="80sp" android:id="@+id/button1" android:text="3" android:background="#ff11ff46" android:tag="1" android:layout_gravity="fill" android:layout_rowWeight="1" android:layout_columnWeight="1" android:layout_row="0" android:layout_column="1"/>
+
+    <Button android:onClick="chooseAnswer" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="80sp" android:id="@+id/button2" android:text="3" android:background="#ffff09e4" android:tag="2" android:layout_gravity="fill" android:layout_rowWeight="1" android:layout_columnWeight="1" android:layout_row="1" android:layout_column="0"/>
+
+    <Button android:onClick="chooseAnswer" android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="80sp" android:id="@+id/button3" android:text="3" android:background="#ff0bfffd" android:tag="3" android:layout_gravity="fill" android:layout_rowWeight="1" android:layout_columnWeight="1" android:layout_row="1" android:layout_column="1"/>
+
+</GridLayout>
+
+    <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:textSize="40sp" android:layout_centerHorizontal="true" android:id="@+id/resultTextView" android:layout_marginTop="25dp" android:layout_below="@+id/gridLayout"/>
+
+    <Button android:onClick="playAgain" android:layout_height="wrap_content" android:layout_width="wrap_content" android:visibility="invisible" android:id="@+id/playAgainButton" android:text="Play Again" android:layout_marginTop="25dp" android:layout_below="@+id/resultTextView" />
+
+</RelativeLayout>
+
+</RelativeLayout>
+
