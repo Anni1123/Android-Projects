@@ -1,0 +1,159 @@
+{
+  "project_info": {
+    "project_number": "321508709524",
+    "firebase_url": "https://logindemo-34245.firebaseio.com",
+    "project_id": "logindemo-34245",
+    "storage_bucket": "logindemo-34245.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321508709524:android:cdf029a5dd52c3bbe29081",
+        "android_client_info": {
+          "package_name": "com.example.coursebuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321508709524-tnjuruvv0pjd4m6es2mmc5f4jsrvjddr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.coursebuy",
+            "certificate_hash": "51b072ca4afbba9448c1fc3ae10d8e216744ed8c"
+          }
+        },
+        {
+          "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4hCjXRKdf9PTY_hWq6v2tB_vHGkZGGKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321508709524:android:07d046f566d5c352e29081",
+        "android_client_info": {
+          "package_name": "com.example.groceryapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321508709524-lhotusst4eubhe8ma04p6qad13516mfe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.groceryapp",
+            "certificate_hash": "51b072ca4afbba9448c1fc3ae10d8e216744ed8c"
+          }
+        },
+        {
+          "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4hCjXRKdf9PTY_hWq6v2tB_vHGkZGGKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321508709524:android:a7593edd951bc37ce29081",
+        "android_client_info": {
+          "package_name": "com.example.logindemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321508709524-5amk37b81dahdqtvhguq6q3eshi3s5u2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.logindemo",
+            "certificate_hash": "51b072ca4afbba9448c1fc3ae10d8e216744ed8c"
+          }
+        },
+        {
+          "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4hCjXRKdf9PTY_hWq6v2tB_vHGkZGGKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321508709524:android:1c91cb25debfa8d1e29081",
+        "android_client_info": {
+          "package_name": "com.satyamevias.phoneauthentication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321508709524-6j8d4qv89msuin5vfd41ca4ip029naij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.satyamevias.phoneauthentication",
+            "certificate_hash": "51b072ca4afbba9448c1fc3ae10d8e216744ed8c"
+          }
+        },
+        {
+          "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4hCjXRKdf9PTY_hWq6v2tB_vHGkZGGKo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321508709524-k6vq28n4jlbdfg5jllvlnerur6fks5p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
