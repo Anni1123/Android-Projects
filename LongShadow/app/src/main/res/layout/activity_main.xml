@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity">
+    <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#F5362C">
+
+        <com.sdsmdg.harjot.longshadows.LongShadowsImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher" />
+
+    </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
+    <com.sdsmdg.harjot.longshadows.LongShadowsWrapper
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="40sp"
+        android:gravity="center"
+        android:background="#40476D">
+
+        <com.sdsmdg.harjot.longshadows.LongShadowsTextView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="Hello"
+            android:textSize="22sp"
+            android:textColor="#FFFFFF" />
+    </com.sdsmdg.harjot.longshadows.LongShadowsWrapper>
+</LinearLayout>
