@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+   <SeekBar android:layout_height="wrap_content"
+       android:layout_width="fill_parent"
+       android:indeterminate="false"
+       android:layout_alignParentTop="true"
+       android:id="@+id/timerSeekBar"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timerSeekBar"
+        android:layout_marginTop="54dp"
+        android:src="@drawable/stopwatch2" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="150dp"
+        android:text="0:30"
+        android:textSize="70sp" />
+
+    <Button
+        android:id="@+id/controllerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-316dp"
+        android:onClick="controlTimer"
+        android:text="Go!" />
+
+</RelativeLayout>
