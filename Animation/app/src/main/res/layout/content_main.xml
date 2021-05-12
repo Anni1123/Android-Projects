@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <ImageView
+        android:id="@+id/fades"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="fade"
+        app:srcCompat="@drawable/mummy2" />
+
+    <ImageView
+        android:id="@+id/fades2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.2"
+        android:onClick="fade"
+        app:srcCompat="@drawable/mummy3" />
+</RelativeLayout>
