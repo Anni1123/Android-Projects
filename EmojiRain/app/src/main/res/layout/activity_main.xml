@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.luolc.emojirain.EmojiRainLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/emojirain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:per="10"
+    app:duration="7200"
+    app:dropDuration="2400"
+    app:dropFrequency="500"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/starta"
+            android:text="Start Animation"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stopa"
+            android:text="Stop Animation"/>
+    </LinearLayout>
+</com.luolc.emojirain.EmojiRainLayout>
+
