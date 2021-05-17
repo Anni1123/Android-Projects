@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexWrap="wrap"
+         >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fourth"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/third"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/second"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/first"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fourth"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/third"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/second"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/first"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</ScrollView>
