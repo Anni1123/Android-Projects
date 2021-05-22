@@ -23,9 +23,8 @@ implementation 'com.github.bumptech.glide:glide:4.9.0'
 ```
 <br>
 Code : <br>
-```
-Glide.with(this).load(R.drawable.adroid).into(imageView);
-```
+
+`Glide.with(this).load(R.drawable.adroid).into(imageView);`
 
 
 ### Using WebView
