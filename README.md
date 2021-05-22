@@ -6,12 +6,7 @@ In this Project you will find various type of Android Studio Projects and Compon
 # Index
 
 * [Animated-Gif](#animated-gif)
-* [Animation](#animation)
-* [Auto-Detect-Text](#auto-detect-text)
-* [Blink-Text-Animation](#blink-text-animation)
-* [Bottom-Nav](#bottom-nav)
 * [Brain-Trainer](#brain-trainer)
-* [Brightness-Management](#brightness-management)
 
 
 ## Animated-Gif 
@@ -40,6 +35,21 @@ webView.loadUrl("Add the link of gif here");
 
 <img src="https://github.com/maityamit/Android-Projects/blob/main/AnimatedGif/one.jpg"
 width="100" height="200"> 
+
+
+## Brain-Trainer
+
+Brain Training Application (Calculation Expert)
+
+### 📸 Screenshots
+
+
+<img src="https://github.com/maityamit/Android-Projects/blob/main/BrainTrainer/one.jpg"
+width="100" height="200">   <img src="https://github.com/maityamit/Android-Projects/blob/main/BrainTrainer/two.jpg"
+width="100" height="200">    <img src="https://github.com/maityamit/Android-Projects/blob/main/BrainTrainer/three.jpg"
+width="100" height="200"> 
+
+
 
 
 
