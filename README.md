@@ -77,6 +77,8 @@ In this Project you will find various type of Android Studio Projects and Compon
 
 ## Animated-Gif 
 
+<a href="https://github.com/maityamit/Android-Projects/tree/main/AnimatedGif">💻Code</a>
+
 ### Using Glide Library
 Glide Library Dependency:<br>
 ```
@@ -105,6 +107,8 @@ width="100" height="200">
 **[⬆ Back to Index](#index)**
 
 ## Brain-Trainer
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/BrainTrainer">💻Code</a>
 
 Brain Training Application (Calculation Expert)
 
