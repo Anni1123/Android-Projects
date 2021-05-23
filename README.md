@@ -6,18 +6,18 @@ In this Project you will find various type of Android Studio Projects and Compon
 # Index
 
 * [Animated-Gif](#animated-gif)
-* [Animation]
-* [Auto-Detect-Text]
-* [Blink-Text-Animation]
-* [Bottom-Nav]
+* [Animation](#animation)
+* [Auto-Detect-Text](#auto-detect-text)
+* [Blink-Text-Animation](#blink-text-animation)
+* [Bottom-Nav](#bottom-nav)
 * [Brain-Trainer](#brain-trainer)
-* [Brightness-Management]
-* [Capture-Screenshot]
-* [Circular-Dialog]
-* [Colorful-Shadow]
-* [Contextual-Menu]
-* [Copy-Paste]
-* [Crop-Imagefrom-Gallery]
+* [Brightness-Management](#brightness-management)
+* [Capture-Screenshot](#capture-screenshot)
+* [Circular-Dialog](#circular-dialog)
+* [Colorful-Shadow](#colorful-shadow)
+* [Contextual-Menu](#contextual-menu)
+* [Copy-Paste](#copy-paste)
+* [Crop-Imagefrom-Gallery](#crop-imagefrom-gallery)
 * [Date-Picker]
 * [Download-Manager]
 * [DrawableView]
@@ -106,6 +106,45 @@ width="100" height="200">
 
 **[⬆ Back to Index](#index)**
 
+
+
+## Animation
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/Animation">💻Code</a>
+
+Animation Show
+
+**[⬆ Back to Index](#index)**
+
+
+## Auto-Detect-Text
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/AutoDetectText">💻Code</a>
+
+Auto-Detect-Text
+
+**[⬆ Back to Index](#index)**  
+
+
+## Blink-Text-Animation
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/BlinkTextAnimation">💻Code</a>
+
+Blink-Text-Animation
+
+**[⬆ Back to Index](#index)**
+
+
+## Bottom-Nav
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/BottomNav">💻Code</a>
+
+Bottom-Nav
+
+**[⬆ Back to Index](#index)**
+
+
+
 ## Brain-Trainer
 
 <a href="https://github.com/maityamit/Android-Projects/tree/main/BrainTrainer">💻Code</a>
@@ -121,6 +160,68 @@ width="100" height="200">    <img src="https://github.com/maityamit/Android-Proj
 width="100" height="200"> 
 
 **[⬆ Back to Index](#index)**
+
+
+
+## Brightness-Management
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/BrightnessManagement">💻Code</a>
+
+Brightness-Management
+
+**[⬆ Back to Index](#index)**
+
+
+## Capture-Screenshot
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/CaptureScreenshot">💻Code</a>
+
+Capture-Screenshot
+
+**[⬆ Back to Index](#index)**
+
+
+## Circular-Dialog
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/CircularDialog">💻Code</a>
+
+Circular-Dialog
+
+**[⬆ Back to Index](#index)**
+
+## Colorful-Shadow
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/ColourfulShadow">💻Code</a>
+
+Colorful-Shadow
+
+**[⬆ Back to Index](#index)**
+
+## Contextual-Menu
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/ContextualMenu">💻Code</a>
+
+Contextual-Menu
+
+**[⬆ Back to Index](#index)**
+
+
+## Copy-Paste
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/CopyText">💻Code</a>
+
+Copy-Paste
+
+**[⬆ Back to Index](#index)**
+
+## Crop-Imagefrom-Gallery
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/CropImagefromGallery">💻Code</a>
+
+Crop-Imagefrom-Gallery
+
+**[⬆ Back to Index](#index)**
+
 
 
 
