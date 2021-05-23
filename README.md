@@ -6,7 +6,73 @@ In this Project you will find various type of Android Studio Projects and Compon
 # Index
 
 * [Animated-Gif](#animated-gif)
+* [Animation]
+* [Auto-Detect-Text]
+* [Blink-Text-Animation]
+* [Bottom-Nav]
 * [Brain-Trainer](#brain-trainer)
+* [Brightness-Management]
+* [Capture-Screenshot]
+* [Circular-Dialog]
+* [Colorful-Shadow]
+* [Contextual-Menu]
+* [Copy-Paste]
+* [Crop-Imagefrom-Gallery]
+* [Date-Picker]
+* [Download-Manager]
+* [DrawableView]
+* [Dynamic-Tab-Layout]
+* [EmojiRain]
+* [Explosion-Activity]
+* [Fingerprint-Authentication]
+* [FlexboxLayout]
+* [Folding-Cell]
+* [Graph-View]
+* [Gravity-View]
+* [Html-Text]
+* [ImageViewer]
+* [Instructions-Dialog]
+* [KenBurns-View]
+* [Liquid-Button]
+* [ListView]
+* [Long-Shadow]
+* [Navtop]
+* [Notes-App]
+* [Notification-Count]
+* [Paint]
+* [Pattern-LockView]
+* [Phone-Authentication]
+* [Photo-Filter]
+* [Pulse-Animation]
+* [Scroll-ImageView]
+* [Select-Image]
+* [Select-Text]
+* [Send-Image]
+* [SnowfallUi]
+* [Spark-Library]
+* [Strike-ThroughText]
+* [StyleButton]
+* [Substring-Clickable]
+* [Super-BottomBar]
+* [TNImage-Library]
+* [Tap-TargetView]
+* [Timers-Demo]
+* [Typing-Animation]
+* [Upload-DataIntoFirebase]
+* [Upload-Pdf]
+* [Url-TextOnly]
+* [Vector-AssetColor]
+* [ViewGif]
+* [Wave-LoadingView]
+* [WhatsNew-Library]
+* [Zoom-ScrollView]
+* [Zoom-TextView]
+
+
+
+
+<br>
+<br>
 
 
 ## Animated-Gif 
