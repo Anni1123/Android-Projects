@@ -633,6 +633,55 @@ Download-Manager
 
 DrawableView
 
+
+### Java
+
+```
+ private void initiaselayout() {
+        drawableView=findViewById(R.id.paintView);
+        increase=findViewById(R.id.increase);
+        decrease=findViewById(R.id.decrease);
+        color=findViewById(R.id.color);
+        undo=findViewById(R.id.undo);
+        config=new DrawableViewConfig();
+        config.setStrokeColor(getResources().getColor(android.R.color.black));
+        config.setShowCanvasBounds(true); // If the view is bigger than canvas, with this the user will see the bounds (Recommended)
+        config.setStrokeWidth(20.0f);
+        config.setMinZoom(1.0f);
+        config.setMaxZoom(3.0f);
+        config.setCanvasHeight(1080);
+        config.setCanvasWidth(1920);
+        drawableView.setConfig(config);
+        increase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                config.setStrokeWidth(config.getStrokeWidth()+10);
+            }
+        });
+        decrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                config.setStrokeWidth(config.getStrokeWidth()-10);
+            }
+        });
+        color.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Random random=new Random();
+                config.setStrokeColor(Color.rgb(255,
+                        random.nextInt(256),random.nextInt(256)));
+            }
+        });
+        undo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawableView.undo();
+            }
+        });
+    }
+    
+```
+
 **[⬆ Back to Index](#index)**
 
 ## Dynamic-Tab-Layout
@@ -640,6 +689,27 @@ DrawableView
 <a href="https://github.com/maityamit/Android-Projects/tree/main/DynamicTabLayout">💻Code</a>
 
 Dynamic-Tab-Layout
+
+
+
+### Java 
+
+```
+ private void setDynamicFragmentToTabLayout() {
+        //here we have given 10 as the tab number
+        //you can give any number ehre
+        for (int i = 0; i < 10; i++) {
+            //set the tab name as "Page: " + i
+            mTabLayout.addTab(mTabLayout.newTab().setText("Page: " + i));
+        }
+        DynamicFragmentAdapter mDynamicFragmentAdapter = new DynamicFragmentAdapter(getSupportFragmentManager(), mTabLayout.getTabCount());
+        //set the adapter
+        viewPager.setAdapter(mDynamicFragmentAdapter);
+        //set the current item as 0 (when app opens for first time)
+        viewPager.setCurrentItem(0);
+    }
+```
+
 
 **[⬆ Back to Index](#index)**
 
@@ -649,6 +719,45 @@ Dynamic-Tab-Layout
 
 EmojiRain
 
+
+### Dependency
+
+```
+ implementation 'com.luolc:emoji-rain:0.1.1'
+```
+
+### Java
+
+```
+Button start=findViewById(R.id.starta);
+EmojiRainLayout mContainer=findViewById(R.id.emojirain);
+        start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // add emoji sources
+                mContainer.addEmoji(R.drawable.emoji_1_3);
+                mContainer.addEmoji(R.drawable.emoji_2_3);
+                mContainer.addEmoji(R.drawable.emoji_3_3);
+                mContainer.addEmoji(R.drawable.emoji_4_3);
+                mContainer.addEmoji(R.drawable.emoji_5_3);
+
+                // set emojis per flow, default 6
+                mContainer.setPer(10);
+
+                // set total duration in milliseconds, default 8000
+                mContainer.setDuration(7200);
+
+                // set average drop duration in milliseconds, default 2400
+                mContainer.setDropDuration(2400);
+
+                // set drop frequency in milliseconds, default 500
+                mContainer.setDropFrequency(500);
+                mContainer.startDropping();
+            }
+        });
+```
+
+
 **[⬆ Back to Index](#index)**
 
 ## Explosion-Activity
@@ -656,6 +765,32 @@ EmojiRain
 <a href="https://github.com/maityamit/Android-Projects/tree/main/ExplosionActivity">💻Code</a>
 
 Explosion-Activity
+
+
+### Dependency
+
+```
+implementation 'tyrantgit:explosionfield:1.0.1'
+```
+
+### Java
+
+```
+final ImageView explode=findViewById(R.id.explode);
+        final ExplosionField explosionField=ExplosionField.attach2Window(this);
+        explode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(explod){
+                    //as we click on the image it will explode
+                    explosionField.explode(explode);
+                    explod=false;
+                }
+            }
+        });
+        
+```
+
 
 **[⬆ Back to Index](#index)**
 
@@ -665,6 +800,72 @@ Explosion-Activity
 
 Fingerprint-Authentication
 
+
+### Dependency
+```
+implementation 'androidx.biometric:biometric:1.0.1'
+```
+
+### Java
+
+```
+        // creating a variable for our BiometricManager
+        //and lets check if our user can use biometric sensor or not
+        BiometricManager biometricManager= androidx.biometric.BiometricManager.from(this);
+        switch (biometricManager.canAuthenticate()){
+            //this means we can use biometric sensor
+            case BiometricManager.BIOMETRIC_SUCCESS:
+                msgtex.setText("You can use the fingerprint sensor to login");
+                msgtex.setTextColor(Color.parseColor("#fafafa"));
+                break;
+             //this means that the device doesnt have fingerprint sensor
+            case BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE:
+                msgtex.setText("This device doesnot have a fingerprint sensor");
+                loginbutton.setVisibility(View.GONE);
+                break;
+
+             //this means that biometric sensor is not available
+            case BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE:
+                msgtex.setText("The biometric sensor is currently unavailable");
+                loginbutton.setVisibility(View.GONE);
+                break;
+            //this means that the device doesnt contain your fingerprint
+            case BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED:
+                msgtex.setText("Your device doesn't have fingerprint saved,please check your security settings");
+                loginbutton.setVisibility(View.GONE);
+                break;
+        }
+        // creating a variable for our Executor
+        Executor executor= ContextCompat.getMainExecutor(this);
+        //this will give us result of AUTHENTICATION
+        final BiometricPrompt biometricPrompt=new BiometricPrompt(MainActivity.this, executor, new BiometricPrompt.AuthenticationCallback() {
+            @Override
+            public void onAuthenticationError(int errorCode, @NonNull CharSequence errString) {
+                super.onAuthenticationError(errorCode, errString);
+            }
+            //THIS METHOD IS CALLED WHEN AYTHENTICATION IS SUCCESS
+            @Override
+            public void onAuthenticationSucceeded(@NonNull BiometricPrompt.AuthenticationResult result) {
+                super.onAuthenticationSucceeded(result);
+                Toast.makeText(getApplicationContext(),"Login Success",Toast.LENGTH_SHORT).show();
+                loginbutton.setText("Login Successful");
+            }
+
+            @Override
+            public void onAuthenticationFailed() {
+                super.onAuthenticationFailed();
+            }
+        });
+        // creating a variable for our promptInfo
+        //BIOMETRIC DIALOG
+        final BiometricPrompt.PromptInfo promptInfo=new BiometricPrompt.PromptInfo.Builder().setTitle("GFG")
+                .setDescription("Use your fingerprint to login ").setNegativeButtonText("Cancel").build();
+                
+```
+
+
+
+
 **[⬆ Back to Index](#index)**
 
 ## FlexboxLayout
@@ -673,13 +874,140 @@ Fingerprint-Authentication
 
 FlexboxLayout
 
+
+### Dependency
+```
+implementation 'com.google.android:flexbox:2.0.1'
+```
+
+### XML
+
+
+```
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:flexWrap="wrap"
+         >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fourth"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/third"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/second"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/first"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fourth"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/third"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/second"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/download"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/first"
+            android:scaleType="fitCenter"
+            app:layout_flexGrow="1"
+            />
+
+    </com.google.android.flexbox.FlexboxLayout>
+    
+```
+
+
 **[⬆ Back to Index](#index)**
 
 ## Folding-Cell
 
 <a href="https://github.com/maityamit/Android-Projects/tree/main/FoldingCell">💻Code</a>
 
-EmojiRain
+Folding-Cell
+
+
+### Dependency
+
+```
+implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+```
+
+### Java
+
+```
+  final com.ramotion.foldingcell.FoldingCell fc =  findViewById(R.id.folding_cell);
+        // attach click listener to folding cell
+        fc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fc.toggle(false);
+            }
+        });
+        
+```
+
+
 
 **[⬆ Back to Index](#index)**
 
