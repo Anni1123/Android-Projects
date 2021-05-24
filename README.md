@@ -18,15 +18,15 @@ In this Project you will find various type of Android Studio Projects and Compon
 * [Contextual-Menu](#contextual-menu)
 * [Copy-Paste](#copy-paste)
 * [Crop-Imagefrom-Gallery](#crop-imagefrom-gallery)
-* [Date-Picker]
-* [Download-Manager]
-* [DrawableView]
-* [Dynamic-Tab-Layout]
-* [EmojiRain]
-* [Explosion-Activity]
-* [Fingerprint-Authentication]
-* [FlexboxLayout]
-* [Folding-Cell]
+* [Date-Picker](#date-picker)
+* [Download-Manager](#download-manager)
+* [DrawableView](#drawableview)
+* [Dynamic-Tab-Layout](#dynamic-tab-layout)
+* [EmojiRain](#emojirain)
+* [Explosion-Activity](#explosion-activity)
+* [Fingerprint-Authentication](#fingerprint-authentication)
+* [FlexboxLayout](#flexboxlayout)
+* [Folding-Cell](#folding-cell)
 * [Graph-View]
 * [Gravity-View]
 * [Html-Text]
@@ -219,6 +219,81 @@ Copy-Paste
 <a href="https://github.com/maityamit/Android-Projects/tree/main/CropImagefromGallery">💻Code</a>
 
 Crop-Imagefrom-Gallery
+
+**[⬆ Back to Index](#index)**
+
+
+
+
+## Date-Picker
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/DatePicker">💻Code</a>
+
+Date-Picker
+
+**[⬆ Back to Index](#index)**
+
+## Download-Manager
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/DownloadManager">💻Code</a>
+
+Download-Manager
+
+**[⬆ Back to Index](#index)**
+
+## DrawableView
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/DrawableView">💻Code</a>
+
+DrawableView
+
+**[⬆ Back to Index](#index)**
+
+## Dynamic-Tab-Layout
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/DynamicTabLayout">💻Code</a>
+
+Dynamic-Tab-Layout
+
+**[⬆ Back to Index](#index)**
+
+## EmojiRain
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/EmojiRain">💻Code</a>
+
+EmojiRain
+
+**[⬆ Back to Index](#index)**
+
+## Explosion-Activity
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/ExplosionActivity">💻Code</a>
+
+Explosion-Activity
+
+**[⬆ Back to Index](#index)**
+
+## Fingerprint-Authentication
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/FingerprintAuthentication">💻Code</a>
+
+Fingerprint-Authentication
+
+**[⬆ Back to Index](#index)**
+
+## FlexboxLayout
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/FlexboxLayout">💻Code</a>
+
+FlexboxLayout
+
+**[⬆ Back to Index](#index)**
+
+## Folding-Cell
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/FoldingCell">💻Code</a>
+
+EmojiRain
 
 **[⬆ Back to Index](#index)**
 
