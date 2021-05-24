@@ -560,11 +560,44 @@ ClipboardManager manager=(ClipboardManager)getSystemService(Context.CLIPBOARD_SE
 Crop-Imagefrom-Gallery
 
 ### Dependency
-
 ```
  api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
     implementation 'com.squareup.picasso:picasso:2.5.2'
 ```
+
+### Mainfest
+
+```
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+```
+
+### Java
+
+```
+@Override
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+  if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) {
+    CropImage.ActivityResult result = CropImage.getActivityResult(data);
+    if (resultCode == RESULT_OK) {
+      Uri resultUri = result.getUri();
+    } else if (resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE) {
+      Exception error = result.getError();
+    }
+  }
+}
+```
+
+
+
+
+<br>
+
+<img src="https://github.com/maityamit/Android-Projects/blob/main/CropImagefromGallery/demo.gif"
+width="200" height="180"> 
+
+
+
 
 
 **[⬆ Back to Index](#index)**
@@ -606,6 +639,12 @@ Date-Picker
         
 ```
 <br>
+
+
+<img src="https://github.com/maityamit/Android-Projects/blob/main/DatePicker/Pasted-into-React-Material-UI-Datepicker-and-Timepicker-Tutorial.png"
+width="130" height="200"> 
+
+
 
 **[⬆ Back to Index](#index)**
 
@@ -709,6 +748,11 @@ Dynamic-Tab-Layout
         viewPager.setCurrentItem(0);
     }
 ```
+
+<br>
+
+<img src="https://github.com/maityamit/Android-Projects/blob/main/DynamicTabLayout/frg1.png"
+width="100" height="200"> 
 
 
 **[⬆ Back to Index](#index)**
@@ -864,6 +908,8 @@ implementation 'androidx.biometric:biometric:1.0.1'
 ```
 
 
+<img src="https://github.com/maityamit/Android-Projects/blob/main/FingerprintAuthentication/biometric-dialog-auth.svg"
+width="100" height="200"> 
 
 
 **[⬆ Back to Index](#index)**
@@ -976,6 +1022,9 @@ implementation 'com.google.android:flexbox:2.0.1'
     </com.google.android.flexbox.FlexboxLayout>
     
 ```
+
+<br>
+
 
 
 **[⬆ Back to Index](#index)**
