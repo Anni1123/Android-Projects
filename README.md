@@ -464,6 +464,71 @@ width="100" height="200">
 
 Contextual-Menu
 
+
+
+### Java
+
+```
+public class MainActivity extends AppCompatActivity {
+    private ActionMode mActionMode;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        TextView textView = findViewById(R.id.text_view);
+        textView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if (mActionMode != null) {
+                    return false;
+                }
+
+                mActionMode = startSupportActionMode(mActionModeCallback);
+                return true;
+            }
+        });
+    }
+
+    private ActionMode.Callback mActionModeCallback = new ActionMode.Callback() {
+        @Override
+        public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+            mode.getMenuInflater().inflate(R.menu.e_menu, menu);
+            mode.setTitle("Choose your option");
+            return true;
+        }
+
+        @Override
+        public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+            return false;
+        }
+
+        @Override
+        public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+            switch (item.getItemId()) {
+                case R.id.option_1:
+                    Toast.makeText(MainActivity.this, "Option 1 selected", Toast.LENGTH_SHORT).show();
+                    mode.finish();
+                    return true;
+                case R.id.option_2:
+                    Toast.makeText(MainActivity.this, "Option 2 selected", Toast.LENGTH_SHORT).show();
+                    mode.finish();
+                    return true;
+                default:
+                    return false;
+            }
+        }
+
+        @Override
+        public void onDestroyActionMode(ActionMode mode) {
+            mActionMode = null;
+        }
+    };
+    
+```
+
+
 **[⬆ Back to Index](#index)**
 
 
@@ -473,6 +538,19 @@ Contextual-Menu
 
 Copy-Paste
 
+
+
+### Java
+
+```
+ClipboardManager manager=(ClipboardManager)getSystemService(Context.CLIPBOARD_SERVICE);
+                ClipData data=ClipData.newPlainText("Text",story);
+                manager.setPrimaryClip(data);
+                Toast.makeText(MainActivity.this,"Copied to Clipboard",Toast.LENGTH_LONG).show();
+                
+```
+
+
 **[⬆ Back to Index](#index)**
 
 ## Crop-Imagefrom-Gallery
@@ -480,6 +558,14 @@ Copy-Paste
 <a href="https://github.com/maityamit/Android-Projects/tree/main/CropImagefromGallery">💻Code</a>
 
 Crop-Imagefrom-Gallery
+
+### Dependency
+
+```
+ api 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+```
+
 
 **[⬆ Back to Index](#index)**
 
@@ -492,6 +578,35 @@ Crop-Imagefrom-Gallery
 
 Date-Picker
 
+
+### Java
+
+```
+ final Calendar calendar=Calendar.getInstance();
+        editText=findViewById(R.id.editext);
+        final int day=calendar.get(Calendar.DAY_OF_MONTH);
+        final int year=calendar.get(Calendar.YEAR);
+        final int month=calendar.get(Calendar.MONTH);
+        datePicker=new DatePickerDialog(MainActivity.this);
+        editText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker=new DatePickerDialog(MainActivity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(android.widget.DatePicker view, int year, int month, int dayOfMonth) {
+                        editText.setText(dayOfMonth+"/"+(month+1)+"/"+year);
+                    }
+                },year,month,day);
+                datePicker.getDatePicker().setMinDate(calendar.getTimeInMillis());
+                datePicker.show();
+            }
+
+        });
+        datePicker.getDatePicker().setMinDate(calendar.getTimeInMillis());
+        
+```
+<br>
+
 **[⬆ Back to Index](#index)**
 
 ## Download-Manager
@@ -499,6 +614,16 @@ Date-Picker
 <a href="https://github.com/maityamit/Android-Projects/tree/main/DownloadManager">💻Code</a>
 
 Download-Manager
+
+### Java
+
+```
+ manager=(DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
+                Uri uri=Uri.parse("https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf");
+                DownloadManager.Request request=new DownloadManager.Request(uri);
+                request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE);
+                long reference=manager.enqueue(request);
+```
 
 **[⬆ Back to Index](#index)**
 
