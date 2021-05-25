@@ -27,9 +27,9 @@ In this Project you will find various type of Android Studio Projects and Compon
 * [Fingerprint-Authentication](#fingerprint-authentication)
 * [FlexboxLayout](#flexboxlayout)
 * [Folding-Cell](#folding-cell)
-* [Graph-View]
-* [Gravity-View]
-* [Html-Text]
+* [Graph-View](#graph-view)
+* [Gravity-View](#gravity-view)
+* [Html-Text](#html-text)
 * [ImageViewer]
 * [Instructions-Dialog]
 * [KenBurns-View]
@@ -1060,6 +1060,150 @@ implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
 
 **[⬆ Back to Index](#index)**
 
+
+## Graph-View
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/GraphView">💻Code</a>
+
+Graph-View
+
+
+### Dependency
+
+```
+implementation 'com.jjoe64:graphview:4.2.2'
+```
+
+### Java
+
+```
+  GraphView graphView=findViewById(R.id.graphview);
+        PointsGraphSeries<DataPoint> series=new PointsGraphSeries<>(getDataPoint());
+
+        graphView.addSeries(series);
+        series.setShape(PointsGraphSeries.Shape.TRIANGLE);
+        series.setSize(50);
+        series.setColor(Color.RED);
+        series.setCustomShape(new PointsGraphSeries.CustomShape() {
+            @Override
+            public void draw(Canvas canvas, Paint paint, float x, float y, DataPointInterface dataPoint) {
+                paint.setStrokeWidth(5);
+                canvas.drawLine(x-20,    y,        x,y-20,paint);
+                canvas.drawLine(       x,y-20,x+20,    y,paint);
+                canvas.drawLine(x+20,    y,          x,y+20,paint);
+                canvas.drawLine(x-20,    y,          x,y+20,paint);
+            }
+        });
+        series.setTitle("Title");
+
+        graphView.getLegendRenderer().setVisible(true);
+        graphView.getLegendRenderer().setFixedPosition(4,5);
+//        graphView.getLegendRenderer().setAlign(LegendRenderer.LegendAlign.TOP);
+        graphView.getLegendRenderer().setTextColor(Color.BLUE);
+        graphView.getLegendRenderer().setTextSize(40);
+
+
+        graphView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,LabelView.class));
+
+            }
+        });
+        graphView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                startActivity(new Intent(MainActivity.this,ZoomGraph.class));
+                return false;
+
+            }
+        });
+    }
+
+    private DataPoint[] getDataPoint() {
+        DataPoint[] dp=new DataPoint[]{
+                new DataPoint(0,1),
+                new DataPoint(2,1),
+                new DataPoint(3,5),
+                new DataPoint(6,2),
+                new DataPoint(7,8),
+        };
+        return dp;
+```
+
+
+
+**[⬆ Back to Index](#index)**
+
+
+
+## Gravity-View
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/GravityView">💻Code</a>
+
+Gravity-View
+
+### Dependency
+
+```
+implementation 'implementation 'co.gofynd.library:gravity-view:1.0''
+```
+
+### Java
+
+```
+   gravityView=GravityView.getInstance(this);
+        if(!gravityView.deviceSupported()){
+            // show the error / imageView
+            Toast.makeText(MainActivity.this,"Not Supported",Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            gravityView.setImage(imageView,R.drawable.gravity).center();
+        }
+        
+```
+
+
+
+**[⬆ Back to Index](#index)**
+
+
+
+## Html-Text
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/HtmlText">💻Code</a>
+
+Html-Text
+
+
+### Dependency
+
+```
+implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
+```
+
+### Java
+
+```
+    Spanned spanned= HtmlFormatter.formatHtml(new HtmlFormatterBuilder()
+                .setHtml("<p><big><bold>GeeksForGeeks</bold></big><p>"));
+        gtext.setText(spanned);
+        text2.setHtml("<font color='blue'><a href='https://www.google.com'</a>Go to this link</font>");
+        text2.setOnClickATagListener(new OnClickATagListener() {
+            @Override
+            public boolean onClick(View widget, String spannedText, @Nullable String href) {
+                Toast.makeText(getApplicationContext(),href,Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
+        text1.setHtml("Load Image From Asset<br><img src='image.png'/>",new HtmlAssetsImageGetter(text1));
+        
+```
+
+
+
+**[⬆ Back to Index](#index)**
 
 
 
