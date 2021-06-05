@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/addpasss"
+    android:layout_marginTop="300dp"
+    android:hint="Write Password"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/atoz"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="a-z"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/AtoZ"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="A-z"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/num"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="0-9"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/charcount"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="8 characters"/>
+</LinearLayout>
+
