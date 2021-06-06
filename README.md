@@ -30,9 +30,9 @@ In this Project you will find various type of Android Studio Projects and Compon
 * [Graph-View](#graph-view)
 * [Gravity-View](#gravity-view)
 * [Html-Text](#html-text)
-* [ImageViewer]
-* [Instructions-Dialog]
-* [KenBurns-View]
+* [ImageViewer](#image-viewer)
+* [Instructions-Dialog](#instructions-dialog)
+* [KenBurns-View](#kenburn-view)
 * [Liquid-Button]
 * [ListView]
 * [Long-Shadow]
@@ -1206,8 +1206,209 @@ implementation 'com.ramotion.foldingcell:folding-cell:1.2.3'
 **[⬆ Back to Index](#index)**
 
 
+## ImageViewer
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/ImageViewer">💻Code</a>
+
+ImageViewer
 
 
+
+### Java
+
+```
+   private static final int SELECT_PICTURE = 1;
+    private ImageView imageView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toolbar toolbar =  findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(
+                        Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+                startActivityForResult(i, SELECT_PICTURE);
+            }
+        });
+        imageView = (ImageView) findViewById(R.id.imageView);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == SELECT_PICTURE && resultCode == RESULT_OK && null != data) {
+            Uri selectedImage = data.getData();
+            try {
+                Bitmap bmp = getBitmapFromUri(selectedImage);
+                imageView.setImageBitmap(bmp);
+            } catch (IOException e) {
+                e.printStackTrace();
+                Snackbar.make(imageView, "Error getting image", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        }
+    }
+
+    private Bitmap getBitmapFromUri(Uri uri) throws IOException {
+        ParcelFileDescriptor parcelFileDescriptor =
+                getContentResolver().openFileDescriptor(uri, "r");
+        FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
+        Bitmap image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
+        parcelFileDescriptor.close();
+        return image;
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+//        if (id == R.id.action_settings) {
+//            return true;
+//        }
+
+        return super.onOptionsItemSelected(item);
+    }
+        
+```
+
+
+
+**[⬆ Back to Index](#index)**
+
+
+
+## Instructions-Dialog
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/InstructionsDialog">💻Code</a>
+
+Instructions-Dialog
+
+
+### Dependency
+
+```
+ implementation 'com.github.Q42:AndroidScrollingImageView:1.3.4'
+```
+
+### Java
+
+```
+   private void displaydialogbox() {
+        //initialise dialog
+        final Dialog dialog=new Dialog(this);
+        //set view
+        dialog.setContentView(R.layout.dialogbox);
+        //set layout
+        dialog.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.MATCH_PARENT);
+        //set background
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(
+                Color.TRANSPARENT
+        ));
+        //show dialog
+        dialog.show();
+        View view=dialog.findViewById(R.id.view1);
+        final View view1=dialog.findViewById(R.id.view2);
+        final View view2=dialog.findViewById(R.id.view3);
+        final TextView textView=dialog.findViewById(R.id.textview);
+
+        textView.setText("This is button");
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view.setVisibility(View.INVISIBLE);
+                view1.setVisibility(View.VISIBLE);
+                //set text
+                textView.setText("This is Textview");
+            }
+        });
+        view1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                view1.setVisibility(View.INVISIBLE);
+                view2.setVisibility(View.VISIBLE);
+                //set text
+                textView.setText("This is ImageView");
+            }
+        });
+        view2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+    }
+        
+```
+
+
+
+**[⬆ Back to Index](#index)**
+
+
+
+
+## KenBurns-View
+
+<a href="https://github.com/maityamit/Android-Projects/tree/main/KenBurnsView">💻Code</a>
+
+KenBurns-View
+
+
+### Dependency
+
+```
+ implementation 'com.flaviofaria:kenburnsview:1.0.7'
+```
+
+### Java
+
+```
+ final KenBurnsView kbv = (KenBurnsView) findViewById(R.id.gravity);
+        AccelerateDecelerateInterpolator adi=new AccelerateDecelerateInterpolator();
+        RandomTransitionGenerator randomTransitionGenerator=new RandomTransitionGenerator(1000,adi);
+        kbv.setTransitionGenerator(randomTransitionGenerator);
+        kbv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(moving){
+                    kbv.pause();
+                    moving=false;
+                }else {
+                    kbv.resume();
+                    moving=true;
+                }
+            }
+        });
+
+        kbv.setTransitionListener(new KenBurnsView.TransitionListener() {
+            @Override
+            public void onTransitionStart(Transition transition) {
+                Toast.makeText(MainActivity.this,"Started",Toast.LENGTH_LONG).show();
+            }
+            @Override
+            public void onTransitionEnd(Transition transition) {
+                Toast.makeText(MainActivity.this,"Finish",Toast.LENGTH_LONG).show();
+            }
+        });
+
+```
+
+
+
+**[⬆ Back to Index](#index)**
 
 
 
