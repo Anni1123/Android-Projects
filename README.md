@@ -1406,6 +1406,9 @@ KenBurns-View
 
 ```
 
+<img src="https://github.com/maityamit/Android-Projects/blob/main/KenBurnsView/anim.gif"
+width="100" height="200"> 
+
 
 
 **[⬆ Back to Index](#index)**
