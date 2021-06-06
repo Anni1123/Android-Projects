@@ -32,7 +32,7 @@ In this Project you will find various type of Android Studio Projects and Compon
 * [Html-Text](#html-text)
 * [ImageViewer](#image-viewer)
 * [Instructions-Dialog](#instructions-dialog)
-* [KenBurns-View](#kenburn-view)
+* [KenBurns-View](#kenburns-view)
 * [Liquid-Button]
 * [ListView]
 * [Long-Shadow]
